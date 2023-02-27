@@ -1,4 +1,5 @@
 name: Publish Docker
+
 on: [push]
 jobs:
   build:
@@ -6,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@v5
+      uses: jose9898/Publish-Docker-Github-Action@v5
       with:
         name: jose9898/repository
         username: ${{ secrets.DOCKER_USERNAME }}
